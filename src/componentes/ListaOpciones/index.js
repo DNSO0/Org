@@ -1,4 +1,4 @@
-import "./ListaOpciones.css"
+import "./ListaOpciones.css";
 
 const ListaOpciones = (props) => {
 
@@ -22,7 +22,7 @@ const ListaOpciones = (props) => {
     return <div className="lista-opciones">
         <label>Equipos</label>
         <select value={props.valor} onChange={manejarCambio}>
-            <option value="" disabled defaultValue="" hidden >Seleccionar equipo</option>
+            <option className="disabled" value="" disabled defaultValue="" hidden >Seleccionar equipo</option>
             { equipos.map( (equipo, index)=> <option selected="a ver" key={index} value={equipo} >{equipo}</option> ) }
         </select>
     </div>
