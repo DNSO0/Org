@@ -25,7 +25,7 @@ const Formulario = (props) => {
     }
 
     return <section className="formulario">
-                <from onSubmit={manejarEnvio} className="form">
+                <form onSubmit={manejarEnvio} className="form">
                     <h2>Rellena el formulario para crear el colaborador.</h2>
                     <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required={true} valor={nombre} actualizarValor={actualizarNombre}/>
                     <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" required valor={puesto} actualizarValor={actualizarPuesto} />
@@ -35,7 +35,7 @@ const Formulario = (props) => {
                         Crear
                     </Boton>
                     
-                </from>
+                </form>
            </section>
 } 
 

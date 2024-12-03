@@ -15,6 +15,7 @@ function App() {
   //Registrar colaborador
 
   const registrarColaborador = (colaborador)=> {
+    console.log("Nuevo", colaborador)
     //spread operator
     actualizarColaboradores([...colaboradores, colaborador])
   }
