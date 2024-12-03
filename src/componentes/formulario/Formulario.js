@@ -4,7 +4,7 @@ import CampoTexto from "../CampoTexto/CampoTexto"
 import ListaOpciones from "../ListaOpciones"
 import Boton from "../Boton/index"
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const [nombre, actualizarNombre] = useState("")
     const [puesto, actualizarPuesto] = useState("")
@@ -28,7 +28,7 @@ const Formulario = () => {
                     <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required={true} valor={nombre} actualizarValor={actualizarNombre}/>
                     <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" required valor={puesto} actualizarValor={actualizarPuesto} />
                     <CampoTexto titulo="Foto" placeholder="Ingresar enlace de foto" required valor={foto} actualizarValor={actualizarFoto} />
-                    <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo}/>
+                    <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo} equipos={props.equipos} />
                     <Boton>
                         Crear
                     </Boton>

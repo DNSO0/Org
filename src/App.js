@@ -56,7 +56,7 @@ const equipos = [
     <div >      
       <Header />
       {/* {mostrarFormulario ? <Formulario /> : <></>} */}
-      {mostrarFormulario && <Formulario />}      
+      {mostrarFormulario && <Formulario equipos={equipos.map( (equipo)=> equipo.titulo )} />}      
       <MiOrg cambiarMostrar={cambiarMostrar} />
     
       {
