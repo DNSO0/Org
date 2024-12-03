@@ -70,7 +70,7 @@ const equipos = [
     
       {
         equipos.map ( (equipo)=>{
-          return <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores} />
+          return <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )} />
         } )
       }    
 
