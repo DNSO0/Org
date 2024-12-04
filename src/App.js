@@ -4,10 +4,42 @@ import Header from './componentes/Header/Header.js';
 import Formulario from './componentes/formulario/Formulario.js';
 import MiOrg from './componentes/MiOrg/index.js';
 import Equipo from './componentes/Equipo/index.js';
+import Footer from './componentes/Footer/index.jsx';
 
 function App() {
   const [mostrarFormulario, actualizarMostrar] = useState(false)
-  const [colaboradores, actualizarColaboradores] = useState([])
+  const [colaboradores, actualizarColaboradores] = useState([{
+    equipo: "Front End",
+    foto: "https://github.com/harlandlohora.png",
+    nombre: "Harland Lohora",
+    puesto: "Instructor"
+  },
+  {
+    equipo: "Programación",
+    foto: "https://github.com/genesysR-dev.png",
+    nombre: "Genesys Rondón",
+    puesto: "Desarrolladora de software e instructora"
+  },
+  {
+    equipo: "UX y Diseño",
+    foto: "https://github.com/JeanmarieAluraLatam.png",
+    nombre: "Jeanmarie Quijada",
+    puesto: "Instructora en Alura Latam"
+  },
+  {
+    equipo: "Programación",
+    foto: "https://github.com/christianpva.png",
+    nombre: "Christian Velasco",
+    puesto: "Head de Alura e Instructor"
+  },
+  {
+    equipo: "Innovación y Gestión",
+    foto: "https://github.com/JoseDarioGonzalezCha.png",
+    nombre: "Jose Gonzalez",
+    puesto: "Dev FullStack"
+  }])
+
+
   const cambiarMostrar =()=> {
     actualizarMostrar(!mostrarFormulario)
   }
@@ -72,7 +104,9 @@ const equipos = [
         equipos.map ( (equipo)=>{
           return <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )} />
         } )
-      }    
+      } 
+
+      <Footer />   
 
     </div>
   );
