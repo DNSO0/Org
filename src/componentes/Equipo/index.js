@@ -5,7 +5,7 @@ const Equipo = (props) => {
 
     //Destructuracion
     const { colorPrimario, colorSecundario, titulo} = props.datos
-    const { colaboradores } = props
+    const { colaboradores, eliminarColaborador } = props
 
     const obj = {
         backgroundColor: colorSecundario

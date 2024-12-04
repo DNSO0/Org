@@ -51,6 +51,11 @@ function App() {
     //spread operator
     actualizarColaboradores([...colaboradores, colaborador])
   }
+
+//Eliminar colaborador
+  const eliminarColaborador = ()=> {
+
+  }
   
 //Lista de equipos
 const equipos = [
@@ -61,7 +66,7 @@ const equipos = [
     colorSecundario: "#D9F7E9"
   },
   {
-    titulo: "Front-end",
+    titulo: "Front End",
     colorPrimario: "#82CFFA",
     colorSecundario: "#E8F8FF"
   },
@@ -86,7 +91,7 @@ const equipos = [
     colorSecundario: "#FFF5D9"
   },
   {
-    titulo: "Innovación y  Gestión",
+    titulo: "Innovación y Gestión",
     colorPrimario: "#FF8A29",
     colorSecundario: "#FFEEDF"
   }
@@ -102,7 +107,7 @@ const equipos = [
     
       {
         equipos.map ( (equipo)=>{
-          return <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )} />
+          return <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )} eliminarColaborador={eliminarColaborador} />
         } )
       } 
 
