@@ -21,7 +21,8 @@ const Equipo = (props) => {
                     type='color' 
                     value={colorSecundario}
                     onChange={(evento) =>{
-                        console.log(evento.target.value)
+                        actualizarColor(evento.target.value, titulo)
+                       
                     }}                
                 />
                 <h3 style={estiloTitulo}>{titulo}</h3>

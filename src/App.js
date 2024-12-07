@@ -97,7 +97,14 @@ function App() {
 
 //Actualizar color de equipo
 const actualizarColor = (color, titulo)=> {
+  const equiposActualizados = equipos.map ( (equipo)=>{
+    if(equipo.titulo === titulo){
+      equipo.colorPrimario = color
+    }
+    return equipo
+  } )
 
+  actualizarEquipos(equiposActualizados)
 }
   
   return (
@@ -108,15 +115,14 @@ const actualizarColor = (color, titulo)=> {
       <MiOrg cambiarMostrar={cambiarMostrar} />
     
       {
-        equipos.map ( (equipo)=>{
-          return <Equipo 
+        equipos.map ( (equipo)=> <Equipo 
             datos={equipo} 
             key={equipo.titulo} 
             colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )} 
             eliminarColaborador={eliminarColaborador} 
             actualizarColor={actualizarColor}
             />
-        } )
+         )
       } 
 
       <Footer />   
