@@ -8,7 +8,7 @@ import Equipo from './componentes/Equipo/index.js';
 import Footer from './componentes/Footer/index.jsx';
 
 function App() {
-  const [mostrarFormulario, actualizarMostrar] = useState(false)
+  const [mostrarFormulario, actualizarMostrar] = useState(true)
   const [colaboradores, actualizarColaboradores] = useState([{
     id: uuid(),
     equipo: "Front End",

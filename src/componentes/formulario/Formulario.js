@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Formulario.css"
-import CampoTexto from "../CampoTexto/CampoTexto"
+import Campo from "../Campo/Campo"
 import ListaOpciones from "../ListaOpciones"
 import Boton from "../Boton/index"
 
@@ -35,9 +35,9 @@ const Formulario = (props) => {
     return <section className="formulario">
                 <form onSubmit={manejarEnvio} className="form">
                     <h2>Rellena el formulario para crear el colaborador.</h2>
-                    <CampoTexto titulo="Nombre" placeholder="Ingresar nombre" required={true} valor={nombre} actualizarValor={actualizarNombre}/>
-                    <CampoTexto titulo="Puesto" placeholder="Ingresar puesto" required valor={puesto} actualizarValor={actualizarPuesto} />
-                    <CampoTexto titulo="Foto" placeholder="Ingresar enlace de foto" required valor={foto} actualizarValor={actualizarFoto} />
+                    <Campo titulo="Nombre" placeholder="Ingresar nombre" required={true} valor={nombre} actualizarValor={actualizarNombre}/>
+                    <Campo titulo="Puesto" placeholder="Ingresar puesto" required valor={puesto} actualizarValor={actualizarPuesto} />
+                    <Campo titulo="Foto" placeholder="Ingresar enlace de foto" required valor={foto} actualizarValor={actualizarFoto} />
                     <ListaOpciones valor={equipo} actualizarEquipo={actualizarEquipo} equipos={props.equipos} />
                     <Boton>
                         Crear
@@ -46,8 +46,8 @@ const Formulario = (props) => {
                 </form>
                 <form onSubmit={manejarNuevoEquipo} className="form">
                     <h2>Rellena el formulario para crear el equipo.</h2>
-                    <CampoTexto titulo="Titulo" placeholder="Ingresar titulo" required={true} valor={titulo} actualizarValor={actualizarTitulo}/>
-                    <CampoTexto titulo="Color" placeholder="Ingresar el color el Hex" required valor={color} actualizarValor={actualizarColor} />
+                    <Campo titulo="Titulo" placeholder="Ingresar titulo" required={true} valor={titulo} actualizarValor={actualizarTitulo}/>
+                    <Campo titulo="Color" placeholder="Ingresar el color el Hex" required valor={color} actualizarValor={actualizarColor} type="color" />
                     <Boton>Registrar equipo</Boton>
                 </form>
            </section>
