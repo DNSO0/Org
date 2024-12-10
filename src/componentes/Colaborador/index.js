@@ -1,9 +1,10 @@
 import "./Colaborador.css"
 import { IoMdCloseCircle } from "react-icons/io";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 
 const Colaborador = (props) => {
-    const {nombre, puesto, foto, equipo, id} = props.datos
-    const { colorPrimario, eliminarColaborador } = props
+    const {nombre, puesto, foto, equipo, id, fav} = props.datos
+    const { colorPrimario, eliminarColaborador, like } = props
 
     return <div className="colaborador">
         <IoMdCloseCircle className="eliminar" onClick={()=>eliminarColaborador(id)} />
@@ -13,6 +14,9 @@ const Colaborador = (props) => {
         <div className="info">
             <h4>{nombre}</h4>
             <h5>{puesto}</h5>
+            { fav ? <FaHeart color="red" onClick={()=> like(id)} /> : <FaRegHeart onClick={()=> like(id)} /> }
+            
+            
         </div>
     </div>
 }
